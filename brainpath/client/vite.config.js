@@ -3,13 +3,7 @@ import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import { serwist } from "@serwist/vite";
 
-// https://vite.dev/config/
 export default defineConfig({
-  server: {
-    host: true,
-    port: 5173,
-  },
-
   plugins: [
     react(),
     tailwindcss(),
@@ -21,4 +15,12 @@ export default defineConfig({
       rollupFormat: "iife",
     }),
   ],
+  build: {
+    rollupOptions: {
+      external: [],
+    },
+  },
+  optimizeDeps: {
+    include: ["@serwist/window"],
+  },
 });
