@@ -29,6 +29,6 @@
     "eslint-plugin-react-refresh": "^0.5.2",
     "globals": "^17.6.0",
     "serwist": "^9.5.11",
-    "vite": "^8.0.12"
+    "vite": "^8.0.0"
   }
 }
