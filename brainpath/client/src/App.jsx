@@ -9,6 +9,7 @@ import AdminLayout from "./layouts/AdminLayout.jsx";
 
 import LoginPage from "./pages/LoginPage.jsx";
 import InstructorRequestPage from "./pages/InstructorRequestPage.jsx";
+import LandingPage from "./pages/LandingPage.jsx";
 
 // Student pages
 import StudentDashboard from "./pages/student/Dashboard.jsx";
@@ -49,6 +50,7 @@ function AppContent() {
     <BrowserRouter>
         <Routes>
           {/* Public */}
+          <Route path="/" element={<LandingPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/instructor-request" element={<InstructorRequestPage />} />
 
@@ -119,7 +121,7 @@ function AppContent() {
           </Route>
 
           {/* Catch-all */}
-          <Route path="*" element={<Navigate to="/login" replace />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </BrowserRouter>
   )
